@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Serenity Escape</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="../style.css">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+<style>
+
+.navbar-brand{font-family: caveat;sans-serif;font-size: 25px;}
+
+body{margin-left: 53.5px;margin-right: 53.5px;}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3BhZ2VzL2FuYWx5emVyUG9wdXAvYW5hbHl6ZXJQYWdlU3RhdHVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUFtRDtBQUN2RDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUF5RDtBQUM3RDs7QUFFQTtJQUNJLCtFQUErRTs7Q0FFbEYsNkJBQTZCO0NBQzdCLDJCQUEyQjs7Q0FFM0IsOEJBQThCO0NBQzlCLDRCQUE0QjtDQUM1Qiw2QkFBNkI7O0NBRTdCLDJCQUEyQjtDQUMzQixtQ0FBbUM7O0lBRWhDLCtDQUErQztJQUMvQyxpREFBaUQ7QUFDckQ7O0FBRUE7Q0FDQyw2QkFBNkI7Q0FDN0IsbUJBQW1CO0NBQ25CLHVCQUF1QjtDQUN2QixzQkFBc0I7O0NBRXRCLG9CQUFvQjtDQUNwQixzQkFBc0I7O0NBRXRCLHFDQUFxQztDQUNyQyx1Q0FBdUM7Q0FDdkMsc0NBQXNDOztJQUVuQywrQ0FBK0M7QUFDbkQ7O0FBRUE7Q0FDQyxnQ0FBZ0M7Q0FDaEMsNEJBQTRCO0NBQzVCLHVCQUF1Qjs7Q0FFdkIsaUNBQWlDO0NBQ2pDLDZCQUE2QjtJQUMxQiw2QkFBNkI7QUFDakM7O0FBRUE7SUFDSSxnQ0FBZ0M7SUFDaEMsNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIsZ0JBQWdCO0FBQ3BCOztBQUVBO0NBQ0MsMEJBQTBCO0NBQzFCLDJCQUEyQjtBQUM1Qjs7QUFFQTtDQUNDLDBCQUEwQjtDQUMxQiwwQkFBMEI7QUFDM0I7O0FBRUE7Q0FDQywwQkFBMEI7Q0FDMUIsMkJBQTJCO0NBQzNCLDhCQUE4QjtBQUMvQjs7QUFFQTtJQUNJLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGtDQUFrQztBQUN0Qzs7QUFFQTtJQUNJO1FBQ0ksNENBQTRDO1FBQzVDLGlEQUFpRDtJQUNyRDs7SUFFQTtRQUNJLDJDQUEyQztJQUMvQzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4Qzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4QztBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiLkJEVExMX2ljb25fb2sge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfb2sucG5nKTtcbn1cblxuLkJEVExMX2ljb25fY3JpdGljYWwge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfY3JpdGljYWwucG5nKTtcbn1cblxuLkJEVExMX2ljb25fYWxlcnQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfYWxlcnQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fZGlzYWJsZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfZGlzYWJsZWQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fd2hpdGVsaXN0ZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfd2hpdGVsaXN0ZWQucG5nKTtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCB7XG4gICAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsIHN5c3RlbS11aTtcblxuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0bWluLWhlaWdodDogNzBweCAhaW1wb3J0YW50O1xuXG5cdGJvcmRlci1zdHlsZTogc29saWQgIWltcG9ydGFudDtcblx0Ym9yZGVyLXdpZHRoOiAxcHggIWltcG9ydGFudDtcblx0Ym9yZGVyLXJhZGl1czogNXB4ICFpbXBvcnRhbnQ7XG5cblx0b3ZlcmZsb3c6IGhpZGRlbiAhaW1wb3J0YW50O1xuXHR6LWluZGV4OiA5OTk5OTk5OTk5OTk5OTkgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KSAhaW1wb3J0YW50O1xuICAgIGJvcmRlci1jb2xvcjogcmdiYSgxMDAsIDEwMCwgMTAwLCAwLjkpICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgPiAuQkRUTExfbGVmdF9ib3gge1xuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0dG9wOiAwcHggIWltcG9ydGFudDtcblx0aGVpZ2h0OiBhdXRvICFpbXBvcnRhbnQ7XG5cdGJvdHRvbTogMHB4ICFpbXBvcnRhbnQ7XG5cblx0bGVmdDogMHB4ICFpbXBvcnRhbnQ7XG5cdHdpZHRoOiA5MnB4ICFpbXBvcnRhbnQ7XG5cblx0YmFja2dyb3VuZC1zaXplOiA1MHB4IDUwcHggIWltcG9ydGFudDtcblx0YmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdCAhaW1wb3J0YW50O1xuXHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDAsIDI0MiwgMjQ2KSAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX3JpZ2h0X2JveCB7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jayAhaW1wb3J0YW50O1xuXHRtYXJnaW4tbGVmdDogOTJweCAhaW1wb3J0YW50O1xuXHR3aWR0aDogMjEwcHQgIWltcG9ydGFudDtcblxuXHRib3gtc2l6aW5nOiBib3JkZXItYm94ICFpbXBvcnRhbnQ7XG5cdHBhZGRpbmctbGVmdDogMTBweCAhaW1wb3J0YW50O1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIHAge1xuICAgIHdoaXRlLXNwYWNlOiBwcmUtd3JhcCAhaW1wb3J0YW50O1xuICAgIHdvcmQtd3JhcDogbm9ybWFsICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICBwYWRkaW5nOiAwcHggIWltcG9ydGFudDtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF90aXRsZSB7XG5cdGZvbnQtc2l6ZTogMTZweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxMnB4ICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX2Rlc2NyaXB0aW9uIHtcblx0Zm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi10b3A6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF93ZWJfcHJvdGVjdGlvbiB7XG5cdGZvbnQtc2l6ZTogMTFweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxNXB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi1ib3R0b206IDEwcHggIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfc3Ryb25nIHtcbiAgICBjb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfbWlsZCB7XG4gICAgY29sb3I6IHJnYig4MSwgOTEsIDEwOSkgIWltcG9ydGFudDtcbn1cblxuQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykge1xuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNTYsIDY3LCA4NykgIWltcG9ydGFudDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiByZ2JhKDE2OSwgMTY5LCAxNjksIDAuOSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX2xlZnRfYm94IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF9zdHJvbmcge1xuICAgICAgICBjb2xvcjogcmdiKDIzOSwgMjQxLCAyNDkpICFpbXBvcnRhbnQ7XG4gICAgfVxuICAgIFxuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX21pbGQge1xuICAgICAgICBjb2xvcjogcmdiKDIxNywgMjE3LCAyMTcpICFpbXBvcnRhbnQ7XG4gICAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+       
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">Serenity Escape</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Public/contactus.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" control-id="ControlID-1">
+            <button class="btn btn-outline-success" type="submit" control-id="ControlID-2">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Contact 3 - Bootstrap Brain Component -->
+<section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-md-center">
+        <div class="col-12 col-lg-6">
+          <div class="row justify-content-xl-center">
+            <div class="col-12 col-xl-11">
+              <h2 class="h1 mb-3">Get in touch</h2>
+              <p class="lead fs-4 text-secondary mb-5">We're always on the lookout to work with new clients. If you're interested in working with us, please get in touch in one of the following ways.</p>
+              <div class="d-flex mb-5">
+                <div class="me-4 text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-geo" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-3">Address</h4>
+                  <address class="mb-0 text-secondary">8014 Edith Blvd NE, Albuquerque, New York, United States</address>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col-12 col-sm-6">
+                  <div class="d-flex mb-5 mb-sm-0">
+                    <div class="me-4 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="mb-3">Phone</h4>
+                      <p class="mb-0">
+                        <a class="link-secondary text-decoration-none" href="tel:+15057922430">(505) 792-2430</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="d-flex mb-0">
+                    <div class="me-4 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z" />
+                        <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="mb-3">E-Mail</h4>
+                      <p class="mb-0">
+                        <a class="link-secondary text-decoration-none" href="mailto:demo@yourdomain.com">demo@yourdomain.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="me-4 text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+                    <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z" />
+                    <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-3">Opening Hours</h4>
+                  <div class="d-flex mb-1">
+                    <p class="text-secondary fw-bold mb-0 me-5">Mon - Fri</p>
+                    <p class="text-secondary mb-0">9am - 5pm</p>
+                  </div>
+                  <div class="d-flex">
+                    <p class="text-secondary fw-bold mb-0 me-5">Sat - Sun</p>
+                    <p class="text-secondary mb-0">9am - 2pm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="bg-white border rounded shadow-sm overflow-hidden">
+  
+            <form action="#!">
+              <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                <div class="col-12">
+                  <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                      </svg>
+                    </span>
+                    <input type="email" class="form-control" id="email" name="email" value="" required>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                      </svg>
+                    </span>
+                    <input type="tel" class="form-control" id="phone" name="phone" value="">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  
+  <hr class="featurette-divider">
+  
+  <!-- FOOTER -->
+  <footer class="container footer">
+    
+    <p>© 2024 Serenity Escape (Pvt) Ltd. All rights reserved. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    
+    <img class="paymentlogo" src="../Assets/Images/5e8999e0f99d7c1f6171a562_Card logos.png" height="30">
+    
+  </footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+
+</body></html>
