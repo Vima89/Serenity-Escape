@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Serenity Escape</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/blogs/blog-1/assets/css/blog-1.css">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+<style>
+
+.navbar-brand{font-family: caveat;sans-serif;font-size: 25px;}
+
+body{margin-left: 53.5px;margin-right: 53.5px;}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3BhZ2VzL2FuYWx5emVyUG9wdXAvYW5hbHl6ZXJQYWdlU3RhdHVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUFtRDtBQUN2RDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUF5RDtBQUM3RDs7QUFFQTtJQUNJLCtFQUErRTs7Q0FFbEYsNkJBQTZCO0NBQzdCLDJCQUEyQjs7Q0FFM0IsOEJBQThCO0NBQzlCLDRCQUE0QjtDQUM1Qiw2QkFBNkI7O0NBRTdCLDJCQUEyQjtDQUMzQixtQ0FBbUM7O0lBRWhDLCtDQUErQztJQUMvQyxpREFBaUQ7QUFDckQ7O0FBRUE7Q0FDQyw2QkFBNkI7Q0FDN0IsbUJBQW1CO0NBQ25CLHVCQUF1QjtDQUN2QixzQkFBc0I7O0NBRXRCLG9CQUFvQjtDQUNwQixzQkFBc0I7O0NBRXRCLHFDQUFxQztDQUNyQyx1Q0FBdUM7Q0FDdkMsc0NBQXNDOztJQUVuQywrQ0FBK0M7QUFDbkQ7O0FBRUE7Q0FDQyxnQ0FBZ0M7Q0FDaEMsNEJBQTRCO0NBQzVCLHVCQUF1Qjs7Q0FFdkIsaUNBQWlDO0NBQ2pDLDZCQUE2QjtJQUMxQiw2QkFBNkI7QUFDakM7O0FBRUE7SUFDSSxnQ0FBZ0M7SUFDaEMsNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIsZ0JBQWdCO0FBQ3BCOztBQUVBO0NBQ0MsMEJBQTBCO0NBQzFCLDJCQUEyQjtBQUM1Qjs7QUFFQTtDQUNDLDBCQUEwQjtDQUMxQiwwQkFBMEI7QUFDM0I7O0FBRUE7Q0FDQywwQkFBMEI7Q0FDMUIsMkJBQTJCO0NBQzNCLDhCQUE4QjtBQUMvQjs7QUFFQTtJQUNJLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGtDQUFrQztBQUN0Qzs7QUFFQTtJQUNJO1FBQ0ksNENBQTRDO1FBQzVDLGlEQUFpRDtJQUNyRDs7SUFFQTtRQUNJLDJDQUEyQztJQUMvQzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4Qzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4QztBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiLkJEVExMX2ljb25fb2sge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfb2sucG5nKTtcbn1cblxuLkJEVExMX2ljb25fY3JpdGljYWwge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfY3JpdGljYWwucG5nKTtcbn1cblxuLkJEVExMX2ljb25fYWxlcnQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfYWxlcnQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fZGlzYWJsZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfZGlzYWJsZWQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fd2hpdGVsaXN0ZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfd2hpdGVsaXN0ZWQucG5nKTtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCB7XG4gICAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsIHN5c3RlbS11aTtcblxuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0bWluLWhlaWdodDogNzBweCAhaW1wb3J0YW50O1xuXG5cdGJvcmRlci1zdHlsZTogc29saWQgIWltcG9ydGFudDtcblx0Ym9yZGVyLXdpZHRoOiAxcHggIWltcG9ydGFudDtcblx0Ym9yZGVyLXJhZGl1czogNXB4ICFpbXBvcnRhbnQ7XG5cblx0b3ZlcmZsb3c6IGhpZGRlbiAhaW1wb3J0YW50O1xuXHR6LWluZGV4OiA5OTk5OTk5OTk5OTk5OTkgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KSAhaW1wb3J0YW50O1xuICAgIGJvcmRlci1jb2xvcjogcmdiYSgxMDAsIDEwMCwgMTAwLCAwLjkpICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgPiAuQkRUTExfbGVmdF9ib3gge1xuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0dG9wOiAwcHggIWltcG9ydGFudDtcblx0aGVpZ2h0OiBhdXRvICFpbXBvcnRhbnQ7XG5cdGJvdHRvbTogMHB4ICFpbXBvcnRhbnQ7XG5cblx0bGVmdDogMHB4ICFpbXBvcnRhbnQ7XG5cdHdpZHRoOiA5MnB4ICFpbXBvcnRhbnQ7XG5cblx0YmFja2dyb3VuZC1zaXplOiA1MHB4IDUwcHggIWltcG9ydGFudDtcblx0YmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdCAhaW1wb3J0YW50O1xuXHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDAsIDI0MiwgMjQ2KSAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX3JpZ2h0X2JveCB7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jayAhaW1wb3J0YW50O1xuXHRtYXJnaW4tbGVmdDogOTJweCAhaW1wb3J0YW50O1xuXHR3aWR0aDogMjEwcHQgIWltcG9ydGFudDtcblxuXHRib3gtc2l6aW5nOiBib3JkZXItYm94ICFpbXBvcnRhbnQ7XG5cdHBhZGRpbmctbGVmdDogMTBweCAhaW1wb3J0YW50O1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIHAge1xuICAgIHdoaXRlLXNwYWNlOiBwcmUtd3JhcCAhaW1wb3J0YW50O1xuICAgIHdvcmQtd3JhcDogbm9ybWFsICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICBwYWRkaW5nOiAwcHggIWltcG9ydGFudDtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF90aXRsZSB7XG5cdGZvbnQtc2l6ZTogMTZweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxMnB4ICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX2Rlc2NyaXB0aW9uIHtcblx0Zm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi10b3A6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF93ZWJfcHJvdGVjdGlvbiB7XG5cdGZvbnQtc2l6ZTogMTFweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxNXB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi1ib3R0b206IDEwcHggIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfc3Ryb25nIHtcbiAgICBjb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfbWlsZCB7XG4gICAgY29sb3I6IHJnYig4MSwgOTEsIDEwOSkgIWltcG9ydGFudDtcbn1cblxuQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykge1xuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNTYsIDY3LCA4NykgIWltcG9ydGFudDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiByZ2JhKDE2OSwgMTY5LCAxNjksIDAuOSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX2xlZnRfYm94IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF9zdHJvbmcge1xuICAgICAgICBjb2xvcjogcmdiKDIzOSwgMjQxLCAyNDkpICFpbXBvcnRhbnQ7XG4gICAgfVxuICAgIFxuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX21pbGQge1xuICAgICAgICBjb2xvcjogcmdiKDIxNywgMjE3LCAyMTcpICFpbXBvcnRhbnQ7XG4gICAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+       
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Serenity Escape</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" control-id="ControlID-1">
+              <button class="btn btn-outline-success" type="submit" control-id="ControlID-2">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+
+<!-- Blog 1 - Bootstrap Discover Sri Lanka Component -->
+<section class="py-3 py-md-5">
+    <div class="container overflow-hidden">
+      <div class="row gy-5">
+        <div class="col-12">
+          <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+            <div class="col-xs-12 col-md-6">
+              <div class="img-wrapper position-relative bsb-hover-push">
+                <a href="./nature.html">
+                  <span class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Nature</span>
+                  <img class="img-fluid rounded w-100 h-100 object-fit-cover" loading="lazy" src="../assets/Images/219-5000x3333 s.jpg" alt="Sports">
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div>
+                <p class="text-secondary mb-1">Nov 11, 2023</p>
+                <h2 class="h1 mb-3"><a class="link-dark text-decoration-none" href="./nature.html">Useful Skateboarding Tips For Beginners</a></h2>
+                <p class="mb-4">Learning how to skateboard can be a simultaneously exciting and terrifying experience. Explore the 20 top tips for beginner skaters.</p>
+                <a class="btn btn-primary" href="./nature.html" target="_self">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <div class="row align-items-center flex-row-reverse gy-3 gy-md-0 gx-xl-5">
+            <div class="col-xs-12 col-md-6">
+              <div class="img-wrapper position-relative bsb-hover-push">
+                <a href="./Beaches.html">
+                  <span class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Beaches</span>
+                  <img class="img-fluid rounded w-100 h-100 object-fit-cover" loading="lazy" src="../Assets/Images/643-2365x1774.jpg" alt="Travel">
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div>
+                <p class="text-secondary mb-1">Oct 9, 2023</p>
+                <h2 class="h1 mb-3"><a class="link-dark text-decoration-none" href="./Beaches.html">Strange Facts About Hot Air Balloons</a></h2>
+                <p class="mb-4">You think the Wright Brothers were impressive? Hot air balloons were carrying people through the air almost a century before the Wright Brothers were even born.</p>
+                <a class="btn btn-primary" href="./Beaches.html" target="_self">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+            <div class="col-xs-12 col-md-6">
+              <div class="img-wrapper position-relative bsb-hover-push">
+                <a href="./historical.html">
+                  <span class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Historical</span>
+                  <img class="img-fluid rounded w-100 h-100 object-fit-cover" loading="lazy" src="../assets/Images/168-1920x1280.jpg" alt="Photography">
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div>
+                <p class="text-secondary mb-1">Sep 17, 2023</p>
+                <h2 class="h1 mb-3"><a class="link-dark text-decoration-none" href="./historical.html">Reasons Why Photography Is an Art Form</a></h2>
+                <p class="mb-4">Before the first photo was captured in the 18th century, lifelike images of what the eyes can see could only be made by talented artists.</p>
+                <a class="btn btn-primary" href="./historical.html" target="_self">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <div class="row align-items-center flex-row-reverse gy-3 gy-md-0 gx-xl-5">
+            <div class="col-xs-12 col-md-6">
+              <div class="img-wrapper position-relative bsb-hover-push">
+                <a href="./foods.html">
+                  <span class="badge rounded-pill text-bg-warning position-absolute top-0 end-0 m-3">Food</span>
+                  <img class="img-fluid rounded w-100 h-100 object-fit-cover" loading="lazy" src="../Assets/Images/292-3852x2556 s.jpg" alt="Food">
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div>
+                <p class="text-secondary mb-1">Aug 23, 2023</p>
+                <h2 class="h1 mb-3"><a class="link-dark text-decoration-none" href="./foods.html">Benefits of Having a Heavy Breakfast Every Morning</a></h2>
+                <p class="mb-4">Running late for work or school? "Let’s skip the breakfast!" Well, this might sound like the most ideal idea to save time when you are on the run.</p>
+                <a class="btn btn-primary" href="./foods.html" target="_self">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+            <div class="row align-items-center gy-3 gy-md-0 gx-xl-5">
+              <div class="col-xs-12 col-md-6">
+                <div class="img-wrapper position-relative bsb-hover-push">
+                  <a href="./culture.html">
+                    <span class="badge rounded-pill text-bg-warning position-absolute top-0 start-0 m-3">Culture</span>
+                    <img class="img-fluid rounded w-100 h-100 object-fit-cover" loading="lazy" src="../assets/Images/76-4912x3264.jpg" alt="Photography">
+                  </a>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div>
+                  <p class="text-secondary mb-1">Jan 17, 2024</p>
+                  <h2 class="h1 mb-3"><a class="link-dark text-decoration-none" href="./culture.html">Reasons Why Photography Is an Art Form</a></h2>
+                  <p class="mb-4">Before the first photo was captured in the 18th century, lifelike images of what the eyes can see could only be made by talented artists.</p>
+                  <a class="btn btn-primary" href="./culture.html" target="_self">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  <hr class="featurette-divider">
+  
+  <!-- FOOTER -->
+  <footer class="container footer">
+    
+    <p>© 2024 Serenity Escape (Pvt) Ltd. All rights reserved. · <a href="./Privacy.html">Privacy</a> · <a href="./terms.html">Terms</a></p>
+    
+    <img class="paymentlogo" src="../Assets/Images/5e8999e0f99d7c1f6171a562_Card logos.png" height="30">
+    
+  </footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+
+</body></html>
