@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Serenity Escape</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/projects/project-1/assets/css/project-1.css">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+<style>
+
+.navbar-brand{font-family: caveat;sans-serif;font-size: 25px;}
+
+body{margin-left: 53.5px;margin-right: 53.5px;}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3BhZ2VzL2FuYWx5emVyUG9wdXAvYW5hbHl6ZXJQYWdlU3RhdHVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUFtRDtBQUN2RDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUF5RDtBQUM3RDs7QUFFQTtJQUNJLCtFQUErRTs7Q0FFbEYsNkJBQTZCO0NBQzdCLDJCQUEyQjs7Q0FFM0IsOEJBQThCO0NBQzlCLDRCQUE0QjtDQUM1Qiw2QkFBNkI7O0NBRTdCLDJCQUEyQjtDQUMzQixtQ0FBbUM7O0lBRWhDLCtDQUErQztJQUMvQyxpREFBaUQ7QUFDckQ7O0FBRUE7Q0FDQyw2QkFBNkI7Q0FDN0IsbUJBQW1CO0NBQ25CLHVCQUF1QjtDQUN2QixzQkFBc0I7O0NBRXRCLG9CQUFvQjtDQUNwQixzQkFBc0I7O0NBRXRCLHFDQUFxQztDQUNyQyx1Q0FBdUM7Q0FDdkMsc0NBQXNDOztJQUVuQywrQ0FBK0M7QUFDbkQ7O0FBRUE7Q0FDQyxnQ0FBZ0M7Q0FDaEMsNEJBQTRCO0NBQzVCLHVCQUF1Qjs7Q0FFdkIsaUNBQWlDO0NBQ2pDLDZCQUE2QjtJQUMxQiw2QkFBNkI7QUFDakM7O0FBRUE7SUFDSSxnQ0FBZ0M7SUFDaEMsNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIsZ0JBQWdCO0FBQ3BCOztBQUVBO0NBQ0MsMEJBQTBCO0NBQzFCLDJCQUEyQjtBQUM1Qjs7QUFFQTtDQUNDLDBCQUEwQjtDQUMxQiwwQkFBMEI7QUFDM0I7O0FBRUE7Q0FDQywwQkFBMEI7Q0FDMUIsMkJBQTJCO0NBQzNCLDhCQUE4QjtBQUMvQjs7QUFFQTtJQUNJLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGtDQUFrQztBQUN0Qzs7QUFFQTtJQUNJO1FBQ0ksNENBQTRDO1FBQzVDLGlEQUFpRDtJQUNyRDs7SUFFQTtRQUNJLDJDQUEyQztJQUMvQzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4Qzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4QztBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiLkJEVExMX2ljb25fb2sge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfb2sucG5nKTtcbn1cblxuLkJEVExMX2ljb25fY3JpdGljYWwge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfY3JpdGljYWwucG5nKTtcbn1cblxuLkJEVExMX2ljb25fYWxlcnQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfYWxlcnQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fZGlzYWJsZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfZGlzYWJsZWQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fd2hpdGVsaXN0ZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfd2hpdGVsaXN0ZWQucG5nKTtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCB7XG4gICAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsIHN5c3RlbS11aTtcblxuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0bWluLWhlaWdodDogNzBweCAhaW1wb3J0YW50O1xuXG5cdGJvcmRlci1zdHlsZTogc29saWQgIWltcG9ydGFudDtcblx0Ym9yZGVyLXdpZHRoOiAxcHggIWltcG9ydGFudDtcblx0Ym9yZGVyLXJhZGl1czogNXB4ICFpbXBvcnRhbnQ7XG5cblx0b3ZlcmZsb3c6IGhpZGRlbiAhaW1wb3J0YW50O1xuXHR6LWluZGV4OiA5OTk5OTk5OTk5OTk5OTkgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KSAhaW1wb3J0YW50O1xuICAgIGJvcmRlci1jb2xvcjogcmdiYSgxMDAsIDEwMCwgMTAwLCAwLjkpICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgPiAuQkRUTExfbGVmdF9ib3gge1xuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0dG9wOiAwcHggIWltcG9ydGFudDtcblx0aGVpZ2h0OiBhdXRvICFpbXBvcnRhbnQ7XG5cdGJvdHRvbTogMHB4ICFpbXBvcnRhbnQ7XG5cblx0bGVmdDogMHB4ICFpbXBvcnRhbnQ7XG5cdHdpZHRoOiA5MnB4ICFpbXBvcnRhbnQ7XG5cblx0YmFja2dyb3VuZC1zaXplOiA1MHB4IDUwcHggIWltcG9ydGFudDtcblx0YmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdCAhaW1wb3J0YW50O1xuXHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDAsIDI0MiwgMjQ2KSAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX3JpZ2h0X2JveCB7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jayAhaW1wb3J0YW50O1xuXHRtYXJnaW4tbGVmdDogOTJweCAhaW1wb3J0YW50O1xuXHR3aWR0aDogMjEwcHQgIWltcG9ydGFudDtcblxuXHRib3gtc2l6aW5nOiBib3JkZXItYm94ICFpbXBvcnRhbnQ7XG5cdHBhZGRpbmctbGVmdDogMTBweCAhaW1wb3J0YW50O1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIHAge1xuICAgIHdoaXRlLXNwYWNlOiBwcmUtd3JhcCAhaW1wb3J0YW50O1xuICAgIHdvcmQtd3JhcDogbm9ybWFsICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICBwYWRkaW5nOiAwcHggIWltcG9ydGFudDtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF90aXRsZSB7XG5cdGZvbnQtc2l6ZTogMTZweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxMnB4ICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX2Rlc2NyaXB0aW9uIHtcblx0Zm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi10b3A6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF93ZWJfcHJvdGVjdGlvbiB7XG5cdGZvbnQtc2l6ZTogMTFweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxNXB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi1ib3R0b206IDEwcHggIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfc3Ryb25nIHtcbiAgICBjb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfbWlsZCB7XG4gICAgY29sb3I6IHJnYig4MSwgOTEsIDEwOSkgIWltcG9ydGFudDtcbn1cblxuQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykge1xuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNTYsIDY3LCA4NykgIWltcG9ydGFudDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiByZ2JhKDE2OSwgMTY5LCAxNjksIDAuOSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX2xlZnRfYm94IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF9zdHJvbmcge1xuICAgICAgICBjb2xvcjogcmdiKDIzOSwgMjQxLCAyNDkpICFpbXBvcnRhbnQ7XG4gICAgfVxuICAgIFxuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX21pbGQge1xuICAgICAgICBjb2xvcjogcmdiKDIxNywgMjE3LCAyMTcpICFpbXBvcnRhbnQ7XG4gICAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+       
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Serenity Escape</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" control-id="ControlID-1">
+              <button class="btn btn-outline-success" type="submit" control-id="ControlID-2">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+
+
+<!-- Project 1 - Bootstrap Brain Component -->
+<section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">Pick Your Favourite Nature Attractions</h2>
+          <p class="text-secondary mb-5 text-center lead fs-4">We are passionate about creating innovative products. We believe that technology can make people's lives better.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-md-2 bsb-project-1-grid">
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/353-5000x2806.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Charming Concept</h3>
+              <div class="text-white bsb-hover-fadeInRight">Photography</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Nature/368-4896x3264.jpg" alt="Inspiration">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Linear Architecture</h3>
+              <div class="text-white bsb-hover-fadeInDown">Inspiration</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/388-4288x2848.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Endless Looks</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/393-2560x1707.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Sleek Typography</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/413-2666x1500.jpg" alt="Fashion">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Ebony Vintage</h3>
+              <div class="text-white bsb-hover-fadeInRight">Fashion</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/434-4928x3264.jpg" alt="Food">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Orange Shine</h3>
+              <div class="text-white bsb-hover-fadeInRight">Food</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/466-3264x2176.jpg" alt="Health">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Boat Adventure</h3>
+              <div class="text-white bsb-hover-fadeInRight">Health</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/469-3008x2000.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Offroad Moves</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../assets/Images/Discover Sri Lanka/Nature/477-4919x3258.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Cozy Occupancy</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </section>
+
+  <section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">Pick Your Favourite Beach Attractions</h2>
+          <p class="text-secondary mb-5 text-center lead fs-4">We are passionate about creating innovative products. We believe that technology can make people's lives better.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-md-2 bsb-project-1-grid">
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/521-5000x3333.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Charming Concept</h3>
+              <div class="text-white bsb-hover-fadeInRight">Photography</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Beaches/541-5000x3181.jpg" alt="Inspiration">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Linear Architecture</h3>
+              <div class="text-white bsb-hover-fadeInDown">Inspiration</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/581-2509x1672.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Endless Looks</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/606-2513x1670.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Sleek Typography</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/609-2580x1626.jpg" alt="Fashion">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Ebony Vintage</h3>
+              <div class="text-white bsb-hover-fadeInRight">Fashion</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/612-2731x1536.jpg" alt="Food">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Orange Shine</h3>
+              <div class="text-white bsb-hover-fadeInRight">Food</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/614-2509x1673.jpg" alt="Health">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Boat Adventure</h3>
+              <div class="text-white bsb-hover-fadeInRight">Health</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/640-2509x1673.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Offroad Moves</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../assets/Images/Discover Sri Lanka/Beaches/715-4272x2848.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Cozy Occupancy</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </section>
+
+  <section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">Pick Your Favourite Historical Attractions</h2>
+          <p class="text-secondary mb-5 text-center lead fs-4">We are passionate about creating innovative products. We believe that technology can make people's lives better.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-md-2 bsb-project-1-grid">
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/436-2580x1716.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Charming Concept</h3>
+              <div class="text-white bsb-hover-fadeInRight">Photography</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Historical/439-5000x3334.jpg" alt="Inspiration">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Linear Architecture</h3>
+              <div class="text-white bsb-hover-fadeInDown">Inspiration</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/486-3409x5000.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Endless Looks</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/495-5000x3333.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Sleek Typography</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/508-2955x3892.jpg" alt="Fashion">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Ebony Vintage</h3>
+              <div class="text-white bsb-hover-fadeInRight">Fashion</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/539-4237x2814.jpg" alt="Food">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Orange Shine</h3>
+              <div class="text-white bsb-hover-fadeInRight">Food</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/546-3456x2304.jpg" alt="Health">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Boat Adventure</h3>
+              <div class="text-white bsb-hover-fadeInRight">Health</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Historical/655-2000x1125.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Offroad Moves</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../assets/Images/Discover Sri Lanka/Historical/719-5000x3333.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Cozy Occupancy</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </section>
+
+
+  <section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">Pick Your Favourite Food Attractions</h2>
+          <p class="text-secondary mb-5 text-center lead fs-4">We are passionate about creating innovative products. We believe that technology can make people's lives better.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-md-2 bsb-project-1-grid">
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/102-4320x3240.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Charming Concept</h3>
+              <div class="text-white bsb-hover-fadeInRight">Photography</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Food/163-2000x1333.jpg" alt="Inspiration">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Linear Architecture</h3>
+              <div class="text-white bsb-hover-fadeInDown">Inspiration</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/225-1500x979.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Endless Looks</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/30-1280x901.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Sleek Typography</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/312-3888x2592.jpg" alt="Fashion">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Ebony Vintage</h3>
+              <div class="text-white bsb-hover-fadeInRight">Fashion</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/326-4928x3264.jpg" alt="Food">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Orange Shine</h3>
+              <div class="text-white bsb-hover-fadeInRight">Food</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/42-3456x2304.jpg" alt="Health">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Boat Adventure</h3>
+              <div class="text-white bsb-hover-fadeInRight">Health</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Food/425-959x635.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Offroad Moves</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../assets/Images/Discover Sri Lanka/Food/75-1999x2998.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Cozy Occupancy</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </section>
+
+  <section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">Pick Your Favourite Cultural Attractions</h2>
+          <p class="text-secondary mb-5 text-center lead fs-4">We are passionate about creating innovative products. We believe that technology can make people's lives better.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-md-2 bsb-project-1-grid">
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/449-4928x3264.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Charming Concept</h3>
+              <div class="text-white bsb-hover-fadeInRight">Photography</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Culture/452-4096x2722.jpg" alt="Inspiration">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Linear Architecture</h3>
+              <div class="text-white bsb-hover-fadeInDown">Inspiration</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/453-2048x1365.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Endless Looks</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/460-4476x2984.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Sleek Typography</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/454-4403x2476.jpg" alt="Fashion">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Ebony Vintage</h3>
+              <div class="text-white bsb-hover-fadeInRight">Fashion</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/464-3198x2230.jpg" alt="Food">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Orange Shine</h3>
+              <div class="text-white bsb-hover-fadeInRight">Food</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/491-5000x4061.jpg" alt="Health">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Boat Adventure</h3>
+              <div class="text-white bsb-hover-fadeInRight">Health</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Culture/494-5000x3334.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Offroad Moves</h3>
+              <div class="text-white bsb-hover-fadeInRight">Nature</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure class="rounded rounded-4 overflow-hidden bsb-overlay-hover">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../assets/Images/Discover Sri Lanka/Culture/524-5000x3333.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Cozy Occupancy</h3>
+              <div class="text-white bsb-hover-fadeInRight">Design</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </section>
+
+
+  
+  <hr class="featurette-divider">
+  
+  <!-- FOOTER -->
+  <footer class="container footer">
+    
+    <p>© 2024 Serenity Escape (Pvt) Ltd. All rights reserved. · <a href="./Privacy.html">Privacy</a> · <a href="./terms.html">Terms</a></p>
+    
+    <img class="paymentlogo" src="../Assets/Images/5e8999e0f99d7c1f6171a562_Card logos.png" height="30">
+    
+  </footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/isotope-packery@2.0.1/packery-mode.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/bs-brain@2.0.3/components/projects/project-1/assets/controller/project-1.js"></script>  
+
+</body></html>

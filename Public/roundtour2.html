@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Serenity Escape</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/featureds/featured-1/assets/css/featured-1.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/processes/process-1/assets/css/process-1.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/projects/project-2/assets/css/project-2.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/services/service-2/assets/css/service-2.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/faqs/faq-2/assets/css/faq-2.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/pricings/pricing-1/assets/css/pricing-1.css">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+<style>
+
+.navbar-brand{font-family: caveat;sans-serif;font-size: 25px;}
+
+body{margin-left: 53.5px;margin-right: 53.5px;}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3BhZ2VzL2FuYWx5emVyUG9wdXAvYW5hbHl6ZXJQYWdlU3RhdHVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHlEQUFnRDtBQUNwRDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUFtRDtBQUN2RDs7QUFFQTtJQUNJLHlEQUFzRDtBQUMxRDs7QUFFQTtJQUNJLHlEQUF5RDtBQUM3RDs7QUFFQTtJQUNJLCtFQUErRTs7Q0FFbEYsNkJBQTZCO0NBQzdCLDJCQUEyQjs7Q0FFM0IsOEJBQThCO0NBQzlCLDRCQUE0QjtDQUM1Qiw2QkFBNkI7O0NBRTdCLDJCQUEyQjtDQUMzQixtQ0FBbUM7O0lBRWhDLCtDQUErQztJQUMvQyxpREFBaUQ7QUFDckQ7O0FBRUE7Q0FDQyw2QkFBNkI7Q0FDN0IsbUJBQW1CO0NBQ25CLHVCQUF1QjtDQUN2QixzQkFBc0I7O0NBRXRCLG9CQUFvQjtDQUNwQixzQkFBc0I7O0NBRXRCLHFDQUFxQztDQUNyQyx1Q0FBdUM7Q0FDdkMsc0NBQXNDOztJQUVuQywrQ0FBK0M7QUFDbkQ7O0FBRUE7Q0FDQyxnQ0FBZ0M7Q0FDaEMsNEJBQTRCO0NBQzVCLHVCQUF1Qjs7Q0FFdkIsaUNBQWlDO0NBQ2pDLDZCQUE2QjtJQUMxQiw2QkFBNkI7QUFDakM7O0FBRUE7SUFDSSxnQ0FBZ0M7SUFDaEMsNEJBQTRCO0lBQzVCLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIsZ0JBQWdCO0FBQ3BCOztBQUVBO0NBQ0MsMEJBQTBCO0NBQzFCLDJCQUEyQjtBQUM1Qjs7QUFFQTtDQUNDLDBCQUEwQjtDQUMxQiwwQkFBMEI7QUFDM0I7O0FBRUE7Q0FDQywwQkFBMEI7Q0FDMUIsMkJBQTJCO0NBQzNCLDhCQUE4QjtBQUMvQjs7QUFFQTtJQUNJLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGtDQUFrQztBQUN0Qzs7QUFFQTtJQUNJO1FBQ0ksNENBQTRDO1FBQzVDLGlEQUFpRDtJQUNyRDs7SUFFQTtRQUNJLDJDQUEyQztJQUMvQzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4Qzs7SUFFQTtRQUNJLG9DQUFvQztJQUN4QztBQUNKIiwic291cmNlc0NvbnRlbnQiOlsiLkJEVExMX2ljb25fb2sge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfb2sucG5nKTtcbn1cblxuLkJEVExMX2ljb25fY3JpdGljYWwge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfY3JpdGljYWwucG5nKTtcbn1cblxuLkJEVExMX2ljb25fYWxlcnQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfYWxlcnQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fZGlzYWJsZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfZGlzYWJsZWQucG5nKTtcbn1cblxuLkJEVExMX2ljb25fd2hpdGVsaXN0ZWQge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9pbWcvYW5hbHl6ZXJfd2hpdGVsaXN0ZWQucG5nKTtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCB7XG4gICAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsIHN5c3RlbS11aTtcblxuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0bWluLWhlaWdodDogNzBweCAhaW1wb3J0YW50O1xuXG5cdGJvcmRlci1zdHlsZTogc29saWQgIWltcG9ydGFudDtcblx0Ym9yZGVyLXdpZHRoOiAxcHggIWltcG9ydGFudDtcblx0Ym9yZGVyLXJhZGl1czogNXB4ICFpbXBvcnRhbnQ7XG5cblx0b3ZlcmZsb3c6IGhpZGRlbiAhaW1wb3J0YW50O1xuXHR6LWluZGV4OiA5OTk5OTk5OTk5OTk5OTkgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KSAhaW1wb3J0YW50O1xuICAgIGJvcmRlci1jb2xvcjogcmdiYSgxMDAsIDEwMCwgMTAwLCAwLjkpICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgPiAuQkRUTExfbGVmdF9ib3gge1xuXHRwb3NpdGlvbjogYWJzb2x1dGUgIWltcG9ydGFudDtcblx0dG9wOiAwcHggIWltcG9ydGFudDtcblx0aGVpZ2h0OiBhdXRvICFpbXBvcnRhbnQ7XG5cdGJvdHRvbTogMHB4ICFpbXBvcnRhbnQ7XG5cblx0bGVmdDogMHB4ICFpbXBvcnRhbnQ7XG5cdHdpZHRoOiA5MnB4ICFpbXBvcnRhbnQ7XG5cblx0YmFja2dyb3VuZC1zaXplOiA1MHB4IDUwcHggIWltcG9ydGFudDtcblx0YmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdCAhaW1wb3J0YW50O1xuXHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXIgIWltcG9ydGFudDtcblxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDAsIDI0MiwgMjQ2KSAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX3JpZ2h0X2JveCB7XG5cdGRpc3BsYXk6IGlubGluZS1ibG9jayAhaW1wb3J0YW50O1xuXHRtYXJnaW4tbGVmdDogOTJweCAhaW1wb3J0YW50O1xuXHR3aWR0aDogMjEwcHQgIWltcG9ydGFudDtcblxuXHRib3gtc2l6aW5nOiBib3JkZXItYm94ICFpbXBvcnRhbnQ7XG5cdHBhZGRpbmctbGVmdDogMTBweCAhaW1wb3J0YW50O1xuICAgIHBhZGRpbmctcmlnaHQ6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIHAge1xuICAgIHdoaXRlLXNwYWNlOiBwcmUtd3JhcCAhaW1wb3J0YW50O1xuICAgIHdvcmQtd3JhcDogbm9ybWFsICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICBwYWRkaW5nOiAwcHggIWltcG9ydGFudDtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF90aXRsZSB7XG5cdGZvbnQtc2l6ZTogMTZweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxMnB4ICFpbXBvcnRhbnQ7XG59XG5cbi5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX2Rlc2NyaXB0aW9uIHtcblx0Zm9udC1zaXplOiAxMnB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi10b3A6IDVweCAhaW1wb3J0YW50O1xufVxuXG4uQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF93ZWJfcHJvdGVjdGlvbiB7XG5cdGZvbnQtc2l6ZTogMTFweCAhaW1wb3J0YW50O1xuXHRtYXJnaW4tdG9wOiAxNXB4ICFpbXBvcnRhbnQ7XG5cdG1hcmdpbi1ib3R0b206IDEwcHggIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfc3Ryb25nIHtcbiAgICBjb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbn1cblxuLkJEVExMX1NlYXJjaF9Qb3B1cCAuQkRUTExfbWlsZCB7XG4gICAgY29sb3I6IHJnYig4MSwgOTEsIDEwOSkgIWltcG9ydGFudDtcbn1cblxuQG1lZGlhIChwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaykge1xuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNTYsIDY3LCA4NykgIWltcG9ydGFudDtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiByZ2JhKDE2OSwgMTY5LCAxNjksIDAuOSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwID4gLkJEVExMX2xlZnRfYm94IHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDcsIDIwLCA0NSkgIWltcG9ydGFudDtcbiAgICB9XG5cbiAgICAuQkRUTExfU2VhcmNoX1BvcHVwIC5CRFRMTF9zdHJvbmcge1xuICAgICAgICBjb2xvcjogcmdiKDIzOSwgMjQxLCAyNDkpICFpbXBvcnRhbnQ7XG4gICAgfVxuICAgIFxuICAgIC5CRFRMTF9TZWFyY2hfUG9wdXAgLkJEVExMX21pbGQge1xuICAgICAgICBjb2xvcjogcmdiKDIxNywgMjE3LCAyMTcpICFpbXBvcnRhbnQ7XG4gICAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+       
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Serenity Escape</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./faq.html">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" control-id="ControlID-1">
+              <button class="btn btn-outline-success" type="submit" control-id="ControlID-2">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<!-- Featured 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 py-xl-8 bg-light">
+    
+  
+    <div class="container">
+      <article>
+        <div class="card">
+          <div class="row g-0">
+            <div class="col-12 col-md-6 order-1 order-md-0 d-flex align-items-center">
+              <div class="card-body p-md-4 p-xl-6 p-xxl-9">
+                <div class="entry-header mb-3">
+                 
+                  <h2 class="card-title entry-title display-3 fw-bold mb-4 lh-1">
+                    <a class="link-dark text-decoration-none" href="#!">How to Design and Produce Products from Scratch</a>
+                  </h2>
+                </div>
+                <p class="card-text entry-summary text-secondary mb-4">
+                  Creating a successful product from scratch is the stuff that entrepreneurial dreams are made of, but it's a journey that's equal parts challenging and thrilling.
+                </p>
+                
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex">
+              <img class="img-fluid rounded-end object-fit-cover" loading="lazy" src="../Assets/Images/643-2365x1774.jpg" alt="Entrepreneurship">
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- Process 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 py-xl-8">
+    <div class="container">
+      <div class="row gy-5 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-6">
+          <img class="img-fluid rounded" loading="lazy" src="../Assets/Images/550-2304 x.jpg" alt="Our Design Process">
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row justify-content-xl-end">
+            <div class="col-12 col-xl-11">
+              <h2 class="h1 mb-3">Tour Itinerary</h2>
+              <p class="lead fs-4 text-secondary mb-5">Our design approach is very organized to ensure satisfaction for our esteemed clients.</p>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">1</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 1</h4>
+                  <p class="mb-0 text-secondary">Get to know your users and their needs better through surveys, interviews, usability testing, and other methods.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">2</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 2</h4>
+                  <p class="mb-0 text-secondary">This involves creating wireframes, mockups, and prototypes to test out your ideas and get feedback from users.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">3</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 3</h4>
+                  <p class="mb-0 text-secondary">Once your product is launched, it's important to gather feedback from users to learn what they like and dislike about it.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">4</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 4</h4>
+                  <p class="mb-0 text-secondary">Once your product is launched, it's important to gather feedback from users to learn what they like and dislike about it.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">5</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 5</h4>
+                  <p class="mb-0 text-secondary">Once your product is launched, it's important to gather feedback from users to learn what they like and dislike about it.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">6</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 6</h4>
+                  <p class="mb-0 text-secondary">Once your product is launched, it's important to gather feedback from users to learn what they like and dislike about it.</p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div>
+                  <span class="btn btn-primary bsb-btn-circle pe-none me-4">7</span>
+                </div>
+                <div>
+                  <h4 class="mb-3">Day 7</h4>
+                  <p class="mb-0 text-secondary">Once your product is launched, it's important to gather feedback from users to learn what they like and dislike about it.</p>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 2 - Bootstrap Brain Component -->
+<section class="bg-light py-5 py-xl-8">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">Tour Highlights</h2>
+          <p class="text-secondary mb-5 text-center lead fs-4">We are committed to working with our partners and customers to develop products that make a difference in the world.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-2 g-md-2 g-xl-3 bsb-project-2-grid">
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/353-5000x2806.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Kandy</h3>
+              <div class="text-white bsb-hover-fadeInRight">Day 1</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Nature/368-4896x3264.jpg" alt="Nature">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Ella</h3>
+              <div class="text-white bsb-hover-fadeInDown">Day 2</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Nature/413-2666x1500.jpg" alt="Adventure">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Thanamalvila</h3>
+              <div class="text-white bsb-hover-fadeInRight">Day 3</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/219-5000x3333 s.jpeg" alt="Adventure">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Yala</h3>
+              <div class="text-white bsb-hover-fadeInDown">Day 4</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/Discover Sri Lanka/Beaches/715-4272x2848.jpg" alt="Photography">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Tangalle</h3>
+              <div class="text-white bsb-hover-fadeInDown">Day 5</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale bsb-hover-scale-up" src="../Assets/Images/643-2365x1774.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInUp">Galle</h3>
+              <div class="text-white bsb-hover-fadeInDown">Day 6</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+        <div class="col-12 col-md-4 bsb-project-2-item">
+          <figure class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0">
+            <a href="#!">
+              <img class="img-fluid bsb-scale-up bsb-hover-scale" src="../Assets/Images/Discover Sri Lanka/Beaches/609-2580x1626.jpg" alt="Design">
+            </a>
+            <figcaption>
+              <h3 class="text-white bsb-hover-fadeInLeft">Negombo</h3>
+              <div class="text-white bsb-hover-fadeInRight">Day 7</div>
+            </figcaption>
+          </figure>
+        </div>
+  
+       
+      </div>
+    </div>
+  </section>
+  
+<!-- Service 2 - Bootstrap Brain Component -->
+<section class="py-5 py-xl-8">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <h2 class="mb-4 display-5 text-center">What is included in the tour plan</h2>
+          <p class="text-secondary mb-5 text-center">We offer a wide range of services to help tech companies of all sizes succeed. We specialize in market research, secure payments, and 24/7 support.</p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        </div>
+      </div>
+    </div>
+  
+    <div class="container overflow-hidden">
+      <div class="row gy-5 gx-md-5 justify-content-center">
+        <div class="col-10 col-md-5 col-xl-4 overflow-hidden">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-command text-primary" viewBox="0 0 16 16">
+                <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3zM6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5H6zm4 1v4H6V6h4zm1-1V3.5A1.5 1.5 0 1 1 12.5 5H11zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5V11zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11H5z" />
+              </svg>
+            </div>
+            <div class="col-12 col-lg-10">
+              <h4 class="mb-3">Market Research</h4>
+              <p class="mb-3 text-secondary">We can help you to understand your target market and identify new opportunities for growth. We offer a variety of market research services including surveys.</p>
+              <div>
+                <a href="#!" class="fw-bold text-decoration-none link-primary">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 col-xl-4 overflow-hidden">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-laptop text-primary" viewBox="0 0 16 16">
+                <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+              </svg>
+            </div>
+            <div class="col-12 col-lg-10">
+              <h4 class="mb-3">Web Design</h4>
+              <p class="mb-3 text-secondary">We can help you to create a visually appealing website. We take into account your brand identity and target audience when designing your website.</p>
+              <div>
+                <a href="#!" class="fw-bold text-decoration-none link-primary">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 col-xl-4 overflow-hidden">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-credit-card-2-front text-primary" viewBox="0 0 16 16">
+                <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                <path d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
+              </svg>
+            </div>
+            <div class="col-12 col-lg-10">
+              <h4 class="mb-3">Secure Payments</h4>
+              <p class="mb-3 text-secondary">We offer a variety of secure payment solutions to help you accept payments. We also offer fraud protection to help protect your business from fraud.</p>
+              <div>
+                <a href="#!" class="fw-bold text-decoration-none link-primary">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 col-xl-4 overflow-hidden">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-cup-hot text-primary" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5ZM2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175Z" />
+                <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
+              </svg>
+            </div>
+            <div class="col-12 col-lg-10">
+              <h4 class="mb-3">Daily Updates</h4>
+              <p class="mb-3 text-secondary">We provide our clients with daily updates on their business performance. This includes data on website traffic, sales, blog posts, and other key metrics.</p>
+              <div>
+                <a href="#!" class="fw-bold text-decoration-none link-primary">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 col-xl-4 overflow-hidden">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-gear text-primary" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+              </svg>
+            </div>
+            <div class="col-12 col-lg-10">
+              <h4 class="mb-3">Digital Marketing</h4>
+              <p class="mb-3 text-secondary">We can help you to promote your business online through a variety of digital marketing channels, including search engine optimization (SEO).</p>
+              <div>
+                <a href="#!" class="fw-bold text-decoration-none link-primary">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 col-xl-4 overflow-hidden">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-telephone-inbound text-primary" viewBox="0 0 16 16">
+                <path d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0zm-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+            <div class="col-12 col-lg-10">
+              <h4 class="mb-3">24/7 Support</h4>
+              <p class="mb-3 text-secondary">We offer 24/7 support to our clients. This means that you can always get help when you need it, no matter what time of day or night it is.</p>
+              <div>
+                <a href="#!" class="fw-bold text-decoration-none link-primary">
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <hr class="featurette-divider">
+
+  <!-- FAQ 2 - Bootstrap Brain Component -->
+<section class="bsb-faq-2 bg-light py-3 py-md-5 py-xl-8">
+    <div class="container">
+      <div class="row gy-5 gy-lg-0">
+        <div class="col-12 col-lg-6">
+          <h2 class="h1 mb-3">How can we help you? Unlocking possibilities for your web hosting FAQs answered. </h2>
+          <p class="lead fs-4 text-secondary mb-4">We hope you have found an answer to your question. If you need any help, please search your query on our Support Center or contact us via email.</p>
+          <a href="./faq.html" class="btn btn-lg bsb-btn-2xl btn-primary">All FAQ</a>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row justify-content-xl-end">
+            <div class="col-12 col-xl-11">
+              <div class="accordion accordion-flush" id="accordionExample">
+                <div class="accordion-item mb-4 shadow-sm">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      What is not included in tour plan?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>To change your billing information, please follow these steps:</p>
+                      <ul>
+                        <li>Go to our website and sign in to your account.</li>
+                        <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                        <li>Under the "Billing Information" section, click on "Edit."</li>
+                        <li>Make your changes and click on "Save."</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-4 shadow-sm">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      How Does Payment System Work?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                    <div class="accordion-body">
+                      A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-4 shadow-sm">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Will taxes be included in my monthly invoice?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                    <div class="accordion-body">
+                      Whether or not taxes are included in your monthly invoice depends on a number of factors, including your location, the type of services you are receiving, and the policies of the company providing you with those services.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-4 shadow-sm">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      What currency will I be charged in?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                    <div class="accordion-body">
+                      The currency you are charged in when making a purchase will depend on a number of factors, including the merchant you are purchasing from, the country you are purchasing from, and the payment method you are using.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item shadow-sm">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      How Do I Cancel My Account?
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                    <div class="accordion-body">
+                      <p>To cancel your account, please follow these steps:</p>
+                      <ul>
+                        <li>Go to our website and sign in to your account.</li>
+                        <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                        <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                        <li>Enter your password and click on "Cancel Account."</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Pricing 1 - Bootstrap Brain Component -->
+<section class="bsb-pricing-1 bg-light py-3 py-md-5 py-xl-8">
+    <div class="container">
+      <div class="row gy-5 gy-lg-0 align-items-center">
+        <div class="col-12 col-lg-4">
+          <h2 class="display-5 mb-3 mb-xl-4">Our Pricing</h2>
+          <p class="lead mb-4 mb-xl-5">Explore our flexible pricing to find an excellent fit to run your business.</p>
+          
+        </div>
+        
+                <div class="col-12 col-md-6">
+                  <div class="card border-0 border-bottom border-primary shadow-lg pt-md-4 pb-md-4 bsb-pricing-popular">
+                    <div class="card-body p-4 p-xxl-5">
+                      <h2 class="h4 mb-2">All inclusive</h2>
+                      <h4 class="display-3 fw-bold text-primary mb-0">$1149</h4>
+                      <p class="text-secondary mb-4">USD</p>
+                      <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                          <span><strong>20</strong> Bootstrap Install</span>
+                        </li>
+                        <li class="list-group-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                          <span><strong>400,000</strong> Visits to SL</span>
+                        </li>
+                        <li class="list-group-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                          <span><strong>50 GB</strong> Disk Space</span>
+                        </li>
+                        <li class="list-group-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                          <span>Free <strong>SSL and CDN</strong></span>
+                        </li>
+                        <li class="list-group-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                          </svg>
+                          <span>Free <strong>Support</strong></span>
+                        </li>
+                      </ul>
+                      <a href="./checkout.html" class="btn bsb-btn-xl btn-primary rounded-pill">Purchase</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <!-- FOOTER -->
+  <footer class="container footer">
+    
+    <p>© 2024 Serenity Escape (Pvt) Ltd. All rights reserved. · <a href="./Privacy.html">Privacy</a> · <a href="./terms.html">Terms</a></p>
+    
+    <img class="paymentlogo" src="../Assets/Images/5e8999e0f99d7c1f6171a562_Card logos.png" height="30">
+    
+  </footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/isotope-packery@2.0.1/packery-mode.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/bs-brain@2.0.3/components/projects/project-2/assets/controller/project-2.js"></script>
+<script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body></html>
