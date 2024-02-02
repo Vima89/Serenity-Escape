@@ -33,6 +33,7 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.badge{font-size: large;}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -86,7 +87,7 @@ h6 {
 }
 
 #header .logo h1 {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
   font-family: caveat;
   padding: 0;
@@ -1505,7 +1506,7 @@ color: #052c3f;}
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background: #85b0be;
   background-size: cover;
   padding: 120px 0;
 }
