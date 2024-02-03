@@ -718,6 +718,7 @@ color: #052c3f;}
 .portfolio-details {
   padding-top: 40px;
   padding-bottom: 0;
+  
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -779,6 +780,14 @@ color: #052c3f;}
   padding: 0;
 }
 
+.portfolio-info .btn{
+  margin-bottom: 50px;
+  
+
+}
+.destination-categories{
+  border: 1px solid rgb(162, 168, 180);
+}
 
 
 /*--------------------------------------------------------------
