@@ -33,7 +33,7 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.badge{font-size: large;}
+.badge{font-size: medium;}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -461,20 +461,13 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  color: #052c3f;
-}
+
 
 .about .content h3 {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
-  color: #4d8090;
+  
 }
 
 .about .content ul {
@@ -622,7 +615,7 @@ color: #052c3f;}
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  
+  background: #e0f0e8;
   color: #444444;
   margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
@@ -644,13 +637,11 @@ color: #052c3f;}
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
-  left: 30px;
-  right: 30px;
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
   background:;
-  padding: 15px;
+  
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
